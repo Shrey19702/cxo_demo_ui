@@ -206,7 +206,7 @@ export default function POI_FORM({ set_show_poi_form }) {
                     ))}
                 </div>
 
-                <button type="submit" className="w-full border border-primary text-primary hover:text-white bg-white hover:bg-primary py-2 flex items-center justify-center gap-5 transition-all">
+                <button type="submit" disabled={loading} className=" disabled:cursor-not-allowed w-full border border-primary text-primary hover:text-white bg-white hover:bg-primary disabled:bg-primary py-2 flex items-center justify-center gap-5 transition-all">
                     <span>
                         Save
                     </span>

@@ -147,7 +147,7 @@ const Crawl_sites = ({ poi_id }) => {
         };
         // console.log(options)
         try {
-            let response = await fetch(`https://api.contrails.ai/crawl`, options);
+            let response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}crawl`, options);
             if (!response.ok) {
                 throw new Error(`Error: ${response.statusText}`);
             }
@@ -188,7 +188,7 @@ const Crawl_sites = ({ poi_id }) => {
                 poi_id: poi_id
             }),
         };
-        const result = await fetch(`https://api.contrails.ai/process-pending`, options);
+        const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}process-pending`, options);
         router.push('/cases');
     }
 
